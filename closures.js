@@ -207,9 +207,14 @@ function secretNumber() {
 
 function timeOutCounter() {
   for (var i = 0; i <= 5; i++) {
-    setTimeout(function() {
-      console.log(i);
-    }, i * 1000);
+
+    function timeout(val){
+
+      setTimeout(function() {
+        console.log(val);
+      }, i * 1000);
+    }
+    timeout(i)
   }
 }
 timeOutCounter();
